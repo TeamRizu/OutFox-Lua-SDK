@@ -1540,10 +1540,10 @@ function PlayerOptions:NotePathWidth(col, value, approach_speed, chainCommand) e
 ---@param chainCommand? boolean
 function PlayerOptions:NotePathWidthCol(name, chainCommand) end
 
----@param column int
+---@param column integer
 ---@param name string
 ---@param chainCommand? boolean
----@return string, bool
+---@return string, boolean
 function PlayerOptions:NoteSkin(column, name, chainCommand) end
 
 ---@param value number
