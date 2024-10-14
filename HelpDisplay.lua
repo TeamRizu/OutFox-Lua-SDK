@@ -38,8 +38,8 @@ function HelpDisplay:SetSecsBetweenSwitches(fSeconds) end
 ---@param tips string[]
 ---@param altTips string[]
 ---@return self
-
 function HelpDisplay:settips(tips, altTips) end
+
 --- Sets the HelpDisplay's text from `sTips` using two colons to separate new sections.
 ---@param sTips string
 ---@return self
