@@ -1,5 +1,7 @@
 ---@meta
 
+---@class float : number
+
 ---@class Def
 Def = {
 	---@type Actor
