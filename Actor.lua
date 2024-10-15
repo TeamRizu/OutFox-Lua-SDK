@@ -33,7 +33,7 @@
 ---@field EditorStateChangedMessageCommand? fun(self: Actor, params: EditorStateChangedMessageParams )
 ---@field EditorUpdateCommand? fun(self: Actor, params: EditorUpdateParams )
 ---@diagnostic disable: redundant-parameter
----@type (Actor|ActorFrame|BitmapText)
+---@type (Actor|ActorFrame|ActorFrameTexture|ActorMultiTexture|ActorMultiVertex|ActorProxy|ActorScroller|ActorSound|AudioVisualizer|Banner|BitmapText|BPMDisplay|HelpDisplay|Model|Sprite|Quad)
 Actor = {}
 
 --- This adds a wrapper state around the Actor, which is like wrapping the Actor in an ActorFrame, except that
