@@ -1,6 +1,6 @@
 ---@meta
 
----@class float : number
+--@class float : number
 
 ---@class Def
 Def = {
