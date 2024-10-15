@@ -1477,15 +1477,15 @@ function PlayerOptions:NotePath(mode, chainCommand) end
 function PlayerOptions:NotePathBlendMode(column, value, approach_speed, chainCommand) end
 
 ---@param mode DrawMode
----@return number|self, number
+---@return DrawMode
 ---@param chainCommand? boolean
-function PlayerOptions:NotePathCol(mode, chainCommand) end
+function PlayerOptions:NotePathDrawMode(mode, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
----@return DrawMode
+---@return number|self, number
 ---@param chainCommand? boolean
-function PlayerOptions:NotePathDrawMode(value, approach_speed, chainCommand) end
+function PlayerOptions:NotePathCol(value, approach_speed, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
