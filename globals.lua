@@ -180,8 +180,8 @@ function DayOfYear() end
 
 --- Recursively deep-copy a table.
 ---@param from table
----@param to table
----@param already_copied table
+---@param to? table
+---@param already_copied? table
 function DeepCopy(from, to, already_copied) end
 
 ---@return boolean
