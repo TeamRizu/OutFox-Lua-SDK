@@ -2,6 +2,8 @@
 
 --- An ActorFrame that renders its contents to a texture.
 ---@class ActorFrameTexture : ActorFrame
+---@overload fun(self: ActorFrameTexture) : self
+---@field [string] fun(self: ActorFrameTexture, params: table?)
 ActorFrameTexture = {}
 
 --- Creates the ActorFrameTexture.

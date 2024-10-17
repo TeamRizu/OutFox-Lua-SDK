@@ -1,7 +1,5 @@
 ---@meta
 
---@class float : number
-
 ---@class Def
 Def = {
 	---@type Actor
@@ -191,6 +189,16 @@ RageColor = {}
 ---@param pn PlayerNumber
 ---@return RageColor
 function PlayerColor(pn) end
+
+---Returns a darker version of the player's color.
+---@param pn PlayerNumber
+---@return RageColor
+function PlayerDarkColor(pn) end
+
+---Returns the player's score color.
+---@param pn PlayerNumber
+---@return RageColor
+function PlayerScoreColor(pn) end
 
 ---Darkens the color provided.
 ---@param c RageColor

@@ -6,7 +6,6 @@
 ---@param alt_name string
 function alias_one(class, main_name, alt_name) end
 
---- 
 ---@param class table
 ---@param set table
 function alias_set(class, set) end
