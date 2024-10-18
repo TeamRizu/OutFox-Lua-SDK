@@ -1112,7 +1112,7 @@ function WrapInActorFrame(children) end
 function WriteGamePrefToFile(name, value) end
 
 --- (internal) Writes user preference `prefName` to its config file with `value` being `tostring`'d.
----@param name string
+---@param prefName string
 ---@param value any
 ---@return boolean
 function WritePrefToFile(prefName, value) end
