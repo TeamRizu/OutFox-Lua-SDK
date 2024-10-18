@@ -24,3 +24,7 @@ function DisplaySpec:GetSupportedModes() end
 --- Win32 "Virtual screen", or `false` otherwise (if this describes a physical display).
 ---@return boolean
 function DisplaySpec:IsVirtual() end
+
+
+---@class DisplaySpecs
+DisplaySpecs = {}
