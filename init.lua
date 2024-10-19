@@ -342,10 +342,8 @@ Var = {}
 Screen = {}
 
 GAMESTATE = {}
-MEMCARDMAN = {}
 ---Preferences Manager
 PREFSMAN = {}
-FILEMAN = {}
 MESSAGEMAN = {}
 -- Stats Manager
 STATSMAN = {}
