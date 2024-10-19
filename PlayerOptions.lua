@@ -1529,54 +1529,54 @@ function PlayerOptions:NotePathGradientPoint(column, iNumPoints, chainCommand) e
 function PlayerOptions:NotePathNumGradientPoints(value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param value number
+---@param approach_speed number
+---@param chainCommand? boolean
+function PlayerOptions:NotePathWidth(value, approach_speed, chainCommand) end
+
+---@return number|self, number
 ---@param col integer
 ---@param value number
 ---@param approach_speed number
 ---@param chainCommand? boolean
-function PlayerOptions:NotePathWidth(col, value, approach_speed, chainCommand) end
+function PlayerOptions:NotePathWidthCol(col, value, approach_speed, chainCommand) end
 
----@return number|self, number
----@param name string
----@param chainCommand? boolean
-function PlayerOptions:NotePathWidthCol(name, chainCommand) end
-
----@param column integer
----@param name string
+---@param name? string
 ---@param chainCommand? boolean
 ---@return string, boolean
-function PlayerOptions:NoteSkin(column, name, chainCommand) end
+function PlayerOptions:NoteSkin(name, chainCommand) end
+
+---@param column integer
+---@param name? string
+---@param chainCommand? boolean
+---@return string, boolean
+function PlayerOptions:NoteSkinCol(column, name, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
----@return string
+---@return number|self, number
 ---@param chainCommand? boolean
-function PlayerOptions:NoteSkinCol(value, approach_speed, chainCommand) end
+function PlayerOptions:NoteSkewX(value, approach_speed, chainCommand) end
 
 ---@param column integer
 ---@param value number
 ---@param approach_speed number
 ---@return number|self, number
 ---@param chainCommand? boolean
-function PlayerOptions:NoteSkewX(column, value, approach_speed, chainCommand) end
+function PlayerOptions:NoteSkewXCol(column, value, approach_speed, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
 ---@return number|self, number
 ---@param chainCommand? boolean
-function PlayerOptions:NoteSkewXCol(value, approach_speed, chainCommand) end
+function PlayerOptions:NoteSkewY(value, approach_speed, chainCommand) end
 
 ---@param column integer
 ---@param value number
 ---@param approach_speed number
 ---@return number|self, number
 ---@param chainCommand? boolean
-function PlayerOptions:NoteSkewY(column, value, approach_speed, chainCommand) end
-
----@param value number
----@param approach_speed number
----@return number|self, number
----@param chainCommand? boolean
-function PlayerOptions:NoteSkewYCol(value, approach_speed, chainCommand) end
+function PlayerOptions:NoteSkewYCol(column, value, approach_speed, chainCommand) end
 
 ---@param column integer
 ---@param value number
