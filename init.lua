@@ -28,7 +28,9 @@ Def = {
 	ActorFrameTexture = {},
 	---@type ActorMultiVertex
 	ActorMultiVertex = {},
-	PercentageDisplay = {}
+	PercentageDisplay = {},
+	---@type NoteField
+	NoteField = {},
 }
 
 ---Loads a module from the theme.
