@@ -6,7 +6,7 @@ Def = {
 	Actor = {},
 	---@type ActorProxy
 	ActorProxy = {},
-	---@class Sprite : Actor
+	---@type Sprite
 	Sprite = {},
 	---@type Model
 	---@diagnostic disable-next-line: missing-fields
@@ -24,6 +24,7 @@ Def = {
 	Sound = {},
 	---@type Banner
 	Banner = {},
+	---@type ActorFrameTexture
 	ActorFrameTexture = {},
 	---@type ActorMultiVertex
 	ActorMultiVertex = {},
@@ -36,6 +37,7 @@ Def = {
 ---@return function
 function LoadModule(ModuleName,...) end
 
+---@class ThemeManager
 THEME = {}
 
 ---Returns true if the specified language exists in the current theme.
