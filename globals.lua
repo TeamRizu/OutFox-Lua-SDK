@@ -572,7 +572,7 @@ function join(delimiter, list) end
 --- Decodes JSON encoded data and returns the result.
 ---@param data string
 ---@return any
-function JSONDecode(data) end
+function JsonDecode(data) end
 
 --- Returns data as JSON. Empty tables are represented as arrays in the output.
 --- <br>
@@ -581,7 +581,7 @@ function JSONDecode(data) end
 ---@param data any
 ---@param minify boolean
 ---@return string
-function JSONEncode(data, minify) end
+function JsonEncode(data, minify) end
 
 --- Returns JudgmentLine jl as a localized string.
 ---@param jl JudgmentLine
