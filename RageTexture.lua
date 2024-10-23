@@ -53,3 +53,11 @@ function RageTexture:rate(fRate) end
 
 --- Reloads the texture.
 function RageTexture:Reload() end
+
+
+---@class RageTextureRenderTarget : RageTexture
+RageTextureRenderTarget = {}
+
+function RageTextureRenderTarget:BeginRenderingTo() end
+
+function RageTextureRenderTarget:FinishRenderingTo() end

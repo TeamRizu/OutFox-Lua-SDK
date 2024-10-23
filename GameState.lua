@@ -243,7 +243,7 @@ function GAMESTATE:GetPlayerDisplayName(pn) end
 function GAMESTATE:GetPlayerState(pn) end
 
 --- Returns the current PlayMode.
----@return PlayMode.
+---@return PlayMode
 function GAMESTATE:GetPlayMode() end
 
 --- Returns the preferred difficulty for the player.

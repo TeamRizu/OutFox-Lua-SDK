@@ -1,7 +1,7 @@
 ---@meta
 
 ---Sound Manager.
----@class SOUND
+---@class GameSoundManager
 SOUND = {}
 
 ---Set the music volume to `fVolume` for `fDuration` seconds.

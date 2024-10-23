@@ -1,3 +1,5 @@
+---@meta
+
 ---@class Banner : Actor
 ---@field [string] fun(self: Banner)
 ---@overload fun(self: Banner) : Banner

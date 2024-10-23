@@ -14,4 +14,3 @@ function ActorProxy:GetTarget() end
 ---@param a Actor
 ---@return self
 function ActorProxy:SetTarget(a) end
-

@@ -6,7 +6,7 @@ Def = {
 	Actor = {},
 	---@type ActorProxy
 	ActorProxy = {},
-	---@class Sprite : Actor
+	---@type Sprite
 	Sprite = {},
 	---@type Model
 	---@diagnostic disable-next-line: missing-fields
@@ -24,10 +24,13 @@ Def = {
 	Sound = {},
 	---@type Banner
 	Banner = {},
+	---@type ActorFrameTexture
 	ActorFrameTexture = {},
 	---@type ActorMultiVertex
 	ActorMultiVertex = {},
-	PercentageDisplay = {}
+	PercentageDisplay = {},
+	---@type NoteField
+	NoteField = {},
 }
 
 ---Loads a module from the theme.
@@ -36,6 +39,7 @@ Def = {
 ---@return function
 function LoadModule(ModuleName,...) end
 
+---@class ThemeManager
 THEME = {}
 
 ---Returns true if the specified language exists in the current theme.
@@ -190,6 +194,16 @@ RageColor = {}
 ---@return RageColor
 function PlayerColor(pn) end
 
+---Returns a darker version of the player's color.
+---@param pn PlayerNumber
+---@return RageColor
+function PlayerDarkColor(pn) end
+
+---Returns the player's score color.
+---@param pn PlayerNumber
+---@return RageColor
+function PlayerScoreColor(pn) end
+
 ---Darkens the color provided.
 ---@param c RageColor
 ---@return RageColor
@@ -332,10 +346,8 @@ Var = {}
 Screen = {}
 
 GAMESTATE = {}
-MEMCARDMAN = {}
 ---Preferences Manager
 PREFSMAN = {}
-FILEMAN = {}
 MESSAGEMAN = {}
 -- Stats Manager
 STATSMAN = {}

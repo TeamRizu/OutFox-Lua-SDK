@@ -33,7 +33,7 @@
 ---@field EditorStateChangedMessageCommand? fun(self: Actor, params: EditorStateChangedMessageParams )
 ---@field EditorUpdateCommand? fun(self: Actor, params: EditorUpdateParams )
 ---@diagnostic disable: redundant-parameter
----@type (Actor|ActorFrame|BitmapText)
+---@type (Actor|ActorFrame|ActorFrameTexture|ActorMultiTexture|ActorMultiVertex|ActorProxy|ActorScroller|ActorSound|AudioVisualizer|Banner|BitmapText|BPMDisplay|HelpDisplay|Model|Sprite|Quad)
 Actor = {}
 
 --- This adds a wrapper state around the Actor, which is like wrapping the Actor in an ActorFrame, except that
@@ -358,6 +358,14 @@ function Actor:decelerate(fRate) end
 ---@param c RageColor
 ---@return self
 function Actor:diffuse(c) end
+
+--- Set the Actor's diffuse color to c.
+---@param r number
+---@param g number
+---@param b number
+---@param a number
+---@return self
+function Actor:diffuse(r, g, b, a) end
 
 --- Sets the Actor's alpha level to `fAlpha`, where `fAlpha` is in the range-
 --- 0..1.
@@ -1299,6 +1307,14 @@ function Actor:set_tween_uses_effect_delta(b) end
 ---@param c RageColor
 ---@return self
 function Actor:shadowcolor(c) end
+
+--- Sets the shadow's color to `c`.
+---@param r number
+---@param g number
+---@param b number
+---@param a number
+---@return self
+function Actor:shadowcolor(r, g, b, a) end
 
 --- Sets the Actor's shadow length to `fLength`.
 ---@param fLength number

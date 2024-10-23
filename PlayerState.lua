@@ -1,6 +1,6 @@
 ---@meta
 
----@class PlayerState = {}
+---@class PlayerState
 PlayerState = {}
 
 --- Applies the player options of ModsLevel_Preferred to the other ModsLevels.

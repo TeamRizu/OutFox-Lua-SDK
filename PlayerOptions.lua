@@ -1262,8 +1262,9 @@ function PlayerOptions:Invert(value, approach_speed, chainCommand) end
 function PlayerOptions:JudgeScale(value, chainCommand) end
 
 ---@return boolean|self
+---@param type LifeType
 ---@param chainCommand? boolean
-function PlayerOptions:Left(LifeType type, chainCommand) end
+function PlayerOptions:Left(type, chainCommand) end
 
 ---@return LifeType
 ---@param value boolean
@@ -1271,12 +1272,14 @@ function PlayerOptions:Left(LifeType type, chainCommand) end
 function PlayerOptions:LifeSetting(value, chainCommand) end
 
 ---@return boolean|self
+---@param sNoteSkinName string
 ---@param chainCommand? boolean
-function PlayerOptions:Little(string sNoteSkinName, chainCommand) end
+function PlayerOptions:Little(sNoteSkinName, chainCommand) end
 
 ---@return string
+---@param type ModTimerType
 ---@param chainCommand? boolean
-function PlayerOptions:LoadNoteSkin(ModTimerType type, chainCommand) end
+function PlayerOptions:LoadNoteSkin(type, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
@@ -1308,8 +1311,9 @@ function PlayerOptions:MaxScrollBPM(value, chainCommand) end
 function PlayerOptions:Mines(value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param tns TapNoteScore
 ---@param chainCommand? boolean
-function PlayerOptions:Mini(TapNoteScore tns, chainCommand) end
+function PlayerOptions:Mini(tns, chainCommand) end
 
 ---@return TapNoteScore
 ---@param value boolean
@@ -1323,19 +1327,31 @@ function PlayerOptions:MinTNSToHideNotes(value, chainCommand) end
 function PlayerOptions:Mirror(value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param axis ModSplineAxis
+---@param column integer
+---@param point integer
+---@param value number
+---@param position number
+---@param approach_speed number
 ---@param chainCommand? boolean
-function PlayerOptions:MMod(ModSplineAxis axis, int column, int point, float value, float position, float approach_speed, chainCommand) end
+function PlayerOptions:MMod(axis, column, point, value, position, approach_speed, chainCommand) end
 
----@return number, float, number
+---@return number, number, number
+---@param axis ModSplineAxis
+---@param column integer
 ---@param chainCommand? boolean
-function PlayerOptions:ModSpline(ModSplineAxis axis, int column, chainCommand) end
+function PlayerOptions:ModSpline(axis, column, chainCommand) end
 
+---@param axis ModSplineAxis
+---@param enable boolean
 ---@param chainCommand? boolean
-function PlayerOptions:ModSplineReset(ModSplineAxis axis, bool enable, chainCommand) end
+function PlayerOptions:ModSplineReset(axis, enable, chainCommand) end
 
 ---@return boolean|self
+---@param axis ModSplineAxis
+---@param type ModSplineType
 ---@param chainCommand? boolean
-function PlayerOptions:ModSplineEnable(ModSplineAxis axis, ModSplineType type, chainCommand) end
+function PlayerOptions:ModSplineEnable(axis, type, chainCommand) end
 
 ---@param column integer
 ---@param value number
@@ -1461,15 +1477,15 @@ function PlayerOptions:NotePath(mode, chainCommand) end
 function PlayerOptions:NotePathBlendMode(column, value, approach_speed, chainCommand) end
 
 ---@param mode DrawMode
----@return number|self, number
+---@return DrawMode
 ---@param chainCommand? boolean
-function PlayerOptions:NotePathCol(mode, chainCommand) end
+function PlayerOptions:NotePathDrawMode(mode, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
----@return DrawMode
+---@return number|self, number
 ---@param chainCommand? boolean
-function PlayerOptions:NotePathDrawMode(value, approach_speed, chainCommand) end
+function PlayerOptions:NotePathCol(value, approach_speed, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
@@ -1484,16 +1500,27 @@ function PlayerOptions:NotePathDrawSize(value, approach_speed, chainCommand) end
 function PlayerOptions:NotePathDrawSizeBack(value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param column integer
+---@param point integer
+---@param red number
+---@param green number
+---@param blue number
+---@param alpha number
 ---@param chainCommand? boolean
-function PlayerOptions:NotePathGrainMult(int column, int point, float red, float green, float blue, float alpha, chainCommand) end
+function PlayerOptions:NotePathGrainMult(column, point, red, green, blue, alpha, chainCommand) end
 
 ---@return RageColor|self
+---@param column integer
+---@param point integer
+---@param position number
 ---@param chainCommand? boolean
-function PlayerOptions:NotePathGradientColor(int column, int point, float position, chainCommand) end
+function PlayerOptions:NotePathGradientColor(column, point, position, chainCommand) end
 
 ---@return number|self
+---@param column integer
+---@param iNumPoints integer
 ---@param chainCommand? boolean
-function PlayerOptions:NotePathGradientPoint(int column, int iNumPoints, chainCommand) end
+function PlayerOptions:NotePathGradientPoint(column, iNumPoints, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
@@ -1502,50 +1529,54 @@ function PlayerOptions:NotePathGradientPoint(int column, int iNumPoints, chainCo
 function PlayerOptions:NotePathNumGradientPoints(value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param value number
+---@param approach_speed number
 ---@param chainCommand? boolean
-function PlayerOptions:NotePathWidth(int col, float value, float approach_speed, chainCommand) end
+function PlayerOptions:NotePathWidth(value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param col integer
+---@param value number
+---@param approach_speed number
 ---@param chainCommand? boolean
-function PlayerOptions:NotePathWidthCol(string name, chainCommand) end
+function PlayerOptions:NotePathWidthCol(col, value, approach_speed, chainCommand) end
 
----@param column int
----@param name string
+---@param name? string
 ---@param chainCommand? boolean
----@return string, bool
-function PlayerOptions:NoteSkin(column, name, chainCommand) end
+---@return string, boolean
+function PlayerOptions:NoteSkin(name, chainCommand) end
+
+---@param column integer
+---@param name? string
+---@param chainCommand? boolean
+---@return string, boolean
+function PlayerOptions:NoteSkinCol(column, name, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
----@return string
+---@return number|self, number
 ---@param chainCommand? boolean
-function PlayerOptions:NoteSkinCol(value, approach_speed, chainCommand) end
+function PlayerOptions:NoteSkewX(value, approach_speed, chainCommand) end
 
 ---@param column integer
 ---@param value number
 ---@param approach_speed number
 ---@return number|self, number
 ---@param chainCommand? boolean
-function PlayerOptions:NoteSkewX(column, value, approach_speed, chainCommand) end
+function PlayerOptions:NoteSkewXCol(column, value, approach_speed, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
 ---@return number|self, number
 ---@param chainCommand? boolean
-function PlayerOptions:NoteSkewXCol(value, approach_speed, chainCommand) end
+function PlayerOptions:NoteSkewY(value, approach_speed, chainCommand) end
 
 ---@param column integer
 ---@param value number
 ---@param approach_speed number
 ---@return number|self, number
 ---@param chainCommand? boolean
-function PlayerOptions:NoteSkewY(column, value, approach_speed, chainCommand) end
-
----@param value number
----@param approach_speed number
----@return number|self, number
----@param chainCommand? boolean
-function PlayerOptions:NoteSkewYCol(value, approach_speed, chainCommand) end
+function PlayerOptions:NoteSkewYCol(column, value, approach_speed, chainCommand) end
 
 ---@param column integer
 ---@param value number
@@ -2165,28 +2196,49 @@ function PlayerOptions:SquareZPeriodCol(value, approach_speed, chainCommand) end
 function PlayerOptions:Stealth(column, value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param color ColorType
+---@param value number
+---@param approach_speed number
 ---@param chainCommand? boolean
-function PlayerOptions:StealthCol(ColorType color, float value, float approach_speed, chainCommand) end
+function PlayerOptions:StealthCol(color, value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param color ColorType
+---@param value number
+---@param approach_speed number
 ---@param chainCommand? boolean
-function PlayerOptions:StealthColor(ColorType color, float value, float approach_speed, chainCommand) end
+function PlayerOptions:StealthColor(color, value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param color ColorType
+---@param column integer
+---@param value number
+---@param approach_speed number
 ---@param chainCommand? boolean
-function PlayerOptions:StealthGlowColor(ColorType color, int column, float value, float approach_speed, chainCommand) end
+function PlayerOptions:StealthGlowColor(color, column, value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param column integer
+---@param point integer
+---@param red number
+---@param green number
+---@param blue number
+---@param alpha number
 ---@param chainCommand? boolean
-function PlayerOptions:StealthGlowColorCol(int column, int point, float red, float green, float blue, float alpha, chainCommand) end
+function PlayerOptions:StealthGlowColorCol(column, point, red, green, blue, alpha, chainCommand) end
 
 ---@return RageColor|self
+---@param column integer
+---@param point integer
+---@param position number
 ---@param chainCommand? boolean
-function PlayerOptions:StealthGlowGradientColor(int column, int point, float position, chainCommand) end
+function PlayerOptions:StealthGlowGradientColor(column, point, position, chainCommand) end
 
 ---@return number|self
+---@param column integer
+---@param iNumPoints integer
 ---@param chainCommand? boolean
-function PlayerOptions:StealthGlowGradientPoint(int column, int iNumPoints, chainCommand) end
+function PlayerOptions:StealthGlowGradientPoint(column, iNumPoints, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
@@ -2255,8 +2307,11 @@ function PlayerOptions:StraightHolds(column, value, approach_speed, chainCommand
 function PlayerOptions:StraightHoldsCol(value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param color ColorType
+---@param value number
+---@param approach_speed number
 ---@param chainCommand? boolean
-function PlayerOptions:Sudden(ColorType color, float value, float approach_speed, chainCommand) end
+function PlayerOptions:Sudden(color, value, approach_speed, chainCommand) end
 
 ---@param value number
 ---@param approach_speed number
@@ -2265,8 +2320,11 @@ function PlayerOptions:Sudden(ColorType color, float value, float approach_speed
 function PlayerOptions:SuddenColor(value, approach_speed, chainCommand) end
 
 ---@return number|self, number
+---@param color ColorType
+---@param value number
+---@param approach_speed number
 ---@param chainCommand? boolean
-function PlayerOptions:SuddenOffset(ColorType color, float value, float approach_speed, chainCommand) end
+function PlayerOptions:SuddenOffset(color, value, approach_speed, chainCommand) end
 
 ---@return number|self, number
 ---@param value boolean
@@ -2685,6 +2743,9 @@ function PlayerOptions:ZigzagZCol(column, value, approach_speed, chainCommand) e
 ---@param chainCommand? boolean
 function PlayerOptions:ZigzagZPeriodCol(column, value, approach_speed, chainCommand) end
 
----@return numberint column, float value, float approach_speed, float
+---@return number|self, number
+---@param column integer
+---@param value number
+---@param approach_speed number
 ---@param chainCommand? boolean
-function PlayerOptions:ZigzagZOffsetCol(, chainCommand) end
+function PlayerOptions:ZigzagZOffsetCol(column, value, approach_speed, chainCommand) end
